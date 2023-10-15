@@ -7,16 +7,16 @@ $inner: 1250px;
 
 // 余白
 $padding-pc: 25px;
-$padding-sp: 20px;
+$padding-sp: 15px;
 
 ////////////////////
 // フォント設定
 ////////////////////
 
-$base-font: "'Noto Serif JP', serif";
-$second-font: "'Noto Sans JP', sans-serif";
-$english-font: "'Cormorant', serif";
-$english-font2: "'Roboto', sans-serif";
+$base-font: 'Noto Serif JP', serif;
+$second-font: 'Noto Sans JP', sans-serif;
+$english-font: 'Cormorant', serif;
+$english-font2: 'Roboto', sans-serif;
 // ※検証ツールでしっかり反映されているか確認する
 
 body {
@@ -24,8 +24,9 @@ body {
 }
 
 // フォントウェイト
-$regular: 300;
-$normal: 400;
+$light: 300;
+$regular: 400;
+$medium: 500;
 $bold: 700;
 
 ////////////////////

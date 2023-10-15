@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.button {
+	display: inline-block;
+	width: rem(204);
+	padding: rem(16) 0;
+	color: $base-color;
+	font-size: rem(16);
+	font-weight: $regular;
+	letter-spacing: 0.05em;
+	background: #272625;
+	border: 1px solid $base-color;
+	border-radius: 6px;
+	text-align: center;
+	position: relative;
+}
+
+.button::after {
+	content: "";
+	display: inline-block;
+	width: rem(5);
+	height: rem(10);
+	background-image: url(../images/common/button-arrow.png);
+	background-size: contain;
+	position: absolute;
+	top: 50%;
+	right: rem(20);
+	transform: translateY(-50%);
+}
