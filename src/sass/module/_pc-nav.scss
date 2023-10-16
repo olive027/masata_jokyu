@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.pc-nav__inner {
+	height: inherit;
+}
+
+.pc-nav__items {
+	height: inherit;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.pc-nav__item {
+	height: inherit;
+}
+
+.pc-nav__item:last-child {
+	position: absolute;
+	right: rem(20);
+	top: rem(25);
+}
+
+.pc-nav__item:nth-child(2),
+.pc-nav__item:nth-child(3) {
+	margin-left: rem(36);
+}
+
+.pc-nav__item a {
+	height: inherit;
+	font-family: $english-font;
+	font-weight: $medium;
+	font-size: rem(18);
+	color: $base-color;
+	text-transform: capitalize;
+	display: flex;
+	align-items: center;
+}
+
+.pc-nav__item:last-child a {
+	height: rem(46);
+	border: 1px solid $base-color;
+	border-radius: 5px;
+	padding: rem(12) rem(32);
+	transition: 0.4s box-shadow, 0.4s border-color;
+	&:hover {
+		box-shadow: 0 rem(7) rem(7) rgba(0,0,0,0.5);
+		border-color: transparent;
+	}
+}

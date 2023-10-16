@@ -16,6 +16,8 @@
   <meta property="og:image" content="" />
   <meta property="og:site_name" content="ExciteCode" />
   <meta property="og:description" content="ExciteCodeは、伝統あるテーラーだからできる、芯地や裏地など、細部へこだわります。わたしたちはワンランク上のオーダースーツをお約束します。" />
+
+  <!-- google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
@@ -26,6 +28,10 @@
   <link rel="icon" href="./assets/images/common/favicon.ico" />
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- swiper -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="./assets/js/script.js"></script>
@@ -59,10 +65,63 @@
           </ul>
         </div>
       </nav>
+      <nav class="header__pc-nav pc-nav">
+        <div class="pc-nav__inner">
+          <ul class="pc-nav__items">
+            <li class="pc-nav__item">
+              <a href="#">about</a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="#">service</a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="#">news</a>
+            </li>
+            <li class="pc-nav__item">
+              <a href="#">contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
 
   </header>
   <main>
+    <div class="mv">
+      <div class="mv__inner">
+        <div class="mv__slider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="./assets/images/common/sp/mv_slide01.jpg" media="(max-width:768px)">
+                <img src="./assets/images/common/mv_pc_slide01.jpg" alt="pcスライド1枚目">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="./assets/images/common/sp/mv_slide02.jpg" media="(max-width:768px)">
+                <img src="./assets/images/common/mv_pc_slide02.jpg" alt="pcスライド2枚目">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="./assets/images/common/sp/mv_slide03.jpg" media="(max-width:768px)">
+                <img src="./assets/images/common/mv_pc_slide03.jpg" alt="pcスライド3枚目">
+              </picture>
+            </div>
+          </div>
+          <!-- ページネーション -->
+          <div class="swiper-pagination"></div>
+          <!-- 前後の矢印 -->
+          <div class="swiper-button-prev swiper-button-black"></div>
+          <div class="swiper-button-next swiper-button-white"></div>
+          <div class="mv__title-wrap">
+            <h2 class="mv__title">MADE to ORDER</h2>
+            <p class="mv__sub-title">上質を仕立てる</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="section-header">
       <h2 class="section-header__title">about</h2>
     </div>
@@ -79,9 +138,16 @@
     </div>
     <a href="" class="button">View&nbsp;More</a>
   </main>
-  <footer>
-
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__copyright">
+        <small>&copy;ExciteCode&nbsp;all&nbsp;rights&nbsp;reserved</small>
+      </div>
+    </div>
   </footer>
+
+  <!-- swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </body>
 
 </html>

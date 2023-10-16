@@ -1,17 +1,21 @@
 @use "global" as *;
 
 .header {
-	// background: transparent;
-	background: #ccc;
+	background: transparent;
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: rem(75);
-	z-index: 100;
+	z-index: 9999;
 	@include mq(md){
 		height: rem(95);
+		border-bottom: 1px solid $base-color;
 	}
 }
 
 .header__inner {
+	width: 100%;
 	height: inherit;
 	padding: 0 rem(15);
 	display: flex;
@@ -19,15 +23,19 @@
 	align-items: center;
 	@include mq(md){
 		padding: 0 rem(20);
+		justify-content: center;
+		// position: relative;
 	}
 }
 
 .header__logo {
 	height: inherit;
 	width: rem(132);
-	z-index: 1000;
+	z-index: 5000;
 	@include mq(md){
 		width: rem(171);
+		position: absolute;
+		left: rem(20);
 	}
 }
 
@@ -44,6 +52,10 @@
 
 .header__pc-nav {
 	height: inherit;
+	display: none;
+	@include mq(md){
+		display: block;
+	}
 }
 
 .header__sp-nav {

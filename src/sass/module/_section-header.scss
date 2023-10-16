@@ -9,7 +9,6 @@
 	text-transform: capitalize;
 	position: relative;
 	padding-left: rem(30);
-	display: inline-block;
 	@include mq(md){
 		padding-left: rem(33);
 		font-size: rem(38);
@@ -33,15 +32,17 @@
 	}
 }
 
-.section-header__title::after {
-	content: "";
-	display: block;
-	width: 100%;
-	height: rem(1);
-	// background-color: $base-color;
-	background-color: #000;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	left: calc(100% + rem(16));
-}
+// .section-header__title::after {
+// 	content: "";
+// 	width: 100%;
+// 	height: rem(1);
+// 	background-color: $base-color;
+// 	// background-color: #000;
+// 	position: absolute;
+// 	top: 50%;
+// 	transform: translateY(-50%);
+// 	margin-left: rem(16);
+// 	@include mq(md){
+// 		margin-left: rem(30);
+// 	}
+// }

@@ -8,11 +8,62 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: $black;
-	// opacity: .7;
-	z-index: 200;
+	background-color: rgba(34,34,34,0.9);
+}
+
+.sp-nav__inner {
+	height: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sp-nav__item:not(:first-child) {
+	margin-top: rem(50);
+}
+
+.sp-nav__item {
+	text-align: center;
 }
 
 .sp-nav__item a {
+	display: inline-block;
 	color: $base-color;
+	font-size: rem(18);
+	font-family: $english-font;
+	font-weight: $medium;
+	text-transform: capitalize;
+	position: relative;
+}
+
+.sp-nav__item:not(:last-child) a {
+	padding-left: rem(25);
+}
+
+.sp-nav__item:last-child a {
+	border: 1px solid $base-color;
+	border-radius: 5px;
+	padding: rem(14) rem(70);
+	transition: 0.4s box-shadow, 0.4s border-color;
+	&:hover {
+		box-shadow: 0 rem(7) rem(7) rgba(0,0,0,0.5);
+		border-color: transparent;
+	}
+}
+
+.sp-nav__item:not(:last-child) a::before {
+	content: "";
+	width: rem(14);
+	height: rem(14);
+	background: url(../images/common/section-title-logo.png);
+	background-size: contain;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}
+
+html.is-fixed {
+	overflow: hidden;
+	height: 100%;
 }

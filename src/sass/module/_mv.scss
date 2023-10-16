@@ -1,0 +1,115 @@
+@use "global" as *;
+
+.mv {
+	width: 100%;
+	height: 100vh;
+	height: 100dvh;
+}
+
+.mv__inner {
+	width: 100%;
+	height: inherit;
+	position: relative;
+}
+
+.mv__slider,
+.swiper-slide picture,
+.swiper-slide img {
+	height: inherit;
+}
+
+.mv__slider .swiper-slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	aspect-ratio: 375 / 665;
+	@include mq(md){
+		aspect-ratio: 1440 / 814;
+	}
+}
+
+.mv__title-wrap {
+	position: absolute;
+	top: rem(294);
+	left: rem(54);
+	z-index: 2;
+	@include mq(md){
+		top: rem(403);
+		left: rem(205);
+	}
+}
+
+.mv__title {
+	color: $base-color;
+	font-family: $english-font;
+	font-weight: $medium;
+	font-size: rem(36);
+	@include mq(md){
+		font-size: rem(54);
+		letter-spacing: 0.05em;
+	}
+}
+
+.mv__sub-title {
+	color: $base-color;
+	font-weight: $regular;
+	font-size: rem(14);
+	margin-top: rem(12);
+	text-align: center;
+	@include mq(md){
+		font-size: rem(18);
+		letter-spacing: 0.12em;
+		text-align: left;
+	}
+}
+
+.mv__slider .swiper-pagination-bullets {
+	bottom: rem(30)!important;
+	@include mq(md){
+		bottom: rem(40)!important;
+	}
+}
+
+.mv__slider .swiper-pagination-bullet {
+	border-radius: 0;
+	width: rem(40);
+	height: rem(2);
+	background-color: $base-color;
+	margin: 0 rem(5)!important;
+	@include mq(md){
+		width: rem(70);
+		height: rem(4);
+		margin: 0 rem(10)!important;
+	}
+}
+
+/* 前へ次への矢印カスタマイズ */
+.mv__slider .swiper-button-prev,
+.mv__slider .swiper-button-next {
+	width: rem(34);
+	height: rem(34);
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: ""!important;
+  height: rem(34);
+  width: rem(34);
+  margin: auto;
+}
+/* 前への矢印カスタマイズ */
+.swiper-button-prev::after {
+	@include mq(md){
+		background-image: url(../images/common/swiper_arrow_left.png);
+		margin-left: rem(70);
+	}
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next::after {
+	@include mq(md){
+		background-image: url(../images/common/swiper_arrow_right.png);
+	}
+}

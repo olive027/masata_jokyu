@@ -4,7 +4,10 @@
 	width: rem(25);
 	height: rem(16);
 	position: relative;
-	z-index: 300;
+	z-index: 5000;
+	@include mq(md){
+		display: none;
+	}
 }
 
 .hamburger span {
