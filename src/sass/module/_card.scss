@@ -1,5 +1,11 @@
 @use "global" as *;
 
+.card {
+	@include mq(md){
+		width: 27.5%;
+	}
+}
+
 .card__image {
 	aspect-ratio: 250 / 280;
 	position: relative;

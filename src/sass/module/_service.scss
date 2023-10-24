@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.service {
+	background-color: $black;
+}
+
+.service__inner {
+	padding-top: rem(60);
+	padding-bottom: rem(60);
+	@include mq(md){
+		padding-top: rem(80);
+		padding-bottom: rem(80);
+	}
+}
+
+.service__tab {
+	margin-top: rem(50);
+}

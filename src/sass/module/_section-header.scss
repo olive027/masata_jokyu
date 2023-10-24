@@ -9,6 +9,8 @@
 	text-transform: capitalize;
 	position: relative;
 	padding-left: rem(30);
+	display: flex;
+	align-items: center;
 	@include mq(md){
 		padding-left: rem(33);
 		font-size: rem(38);
@@ -23,8 +25,7 @@
 	background-image: url(../images/common/section-title-logo.png);
 	background-size: contain;
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	
 	left: rem(0);
 	@include mq(md){
 		width: rem(23);
@@ -32,17 +33,14 @@
 	}
 }
 
-// .section-header__title::after {
-// 	content: "";
-// 	width: 100%;
-// 	height: rem(1);
-// 	background-color: $base-color;
-// 	// background-color: #000;
-// 	position: absolute;
-// 	top: 50%;
-// 	transform: translateY(-50%);
-// 	margin-left: rem(16);
-// 	@include mq(md){
-// 		margin-left: rem(30);
-// 	}
-// }
+.section-header__title::after {
+	content: "";
+	width: 100%;
+	height: rem(1);
+	background-color: $base-color;
+	// background-color: #000;
+	margin-left: rem(16);
+	@include mq(md){
+		margin-left: rem(30);
+	}
+}

@@ -84,8 +84,8 @@
 }
 
 /* 前へ次への矢印カスタマイズ */
-.mv__slider .swiper-button-prev,
-.mv__slider .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
 	width: rem(34);
 	height: rem(34);
 }
@@ -104,12 +104,17 @@
 .swiper-button-prev::after {
 	@include mq(md){
 		background-image: url(../images/common/swiper_arrow_left.png);
-		margin-left: rem(70);
+		position: absolute;
+		left: rem(70);
+		top: rem(60);
 	}
 }
 /* 次への矢印カスタマイズ */
 .swiper-button-next::after {
 	@include mq(md){
 		background-image: url(../images/common/swiper_arrow_right.png);
+		position: absolute;
+		right: rem(70);
+		top: rem(60);
 	}
 }

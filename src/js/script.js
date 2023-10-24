@@ -15,12 +15,28 @@ const swiper = new Swiper(".swiper", {
 		delay: 3000,
 		disableOnInteraction: false,
 	},
-	pagination: {
-		el: '.swiper-pagination',
-	},
+	// 前後の矢印
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+	// ページネーション
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true, // クリック有効化
+  },
 	effect: 'fade',
 	speed: 3000,
 	allowTouchMove: false,
+});
+
+// tab
+$(".js-tab-content:first-of-type").css("display", "block");
+$(".js-tab").click(function(){
+	$(".is-active").removeClass('is-active');
+	$(this).addClass('is-active');
+	const Index = $(this).index();
+	$(".js-tab-content").hide().eq(Index).fadeIn(600);
 });
 
 });
