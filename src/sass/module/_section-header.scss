@@ -44,3 +44,15 @@
 		margin-left: rem(30);
 	}
 }
+
+.section-header.news__section-header .section-header__title {
+	color: $black;
+}
+
+.section-header.news__section-header .section-header__title::before {
+	background-image: url(../images/common/section-title-logo-black.png)
+}
+
+.section-header.news__section-header .section-header__title::after {
+	background-color: #99958F;
+}

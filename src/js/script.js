@@ -39,4 +39,18 @@ $(".js-tab").click(function(){
 	$(".js-tab-content").hide().eq(Index).fadeIn(600);
 });
 
+// headerに背景色を付ける
+let mvHeight = $(".js-mv-height").height();
+let headerHeight = $(".header").height();
+let header = $(".header");
+
+$(window).scroll(function(){
+	if($(this).scrollTop() > mvHeight - headerHeight) {
+		header.addClass('is-color');
+	} else {
+		header.removeClass('is-color');
+	}
+});
+
+
 });

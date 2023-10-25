@@ -8,10 +8,15 @@
 	width: 100%;
 	height: rem(75);
 	z-index: 9999;
+	transition: background 0.5s;
 	@include mq(md){
 		height: rem(95);
 		border-bottom: 1px solid $base-color;
 	}
+}
+
+.header.is-color {
+	background: $black;
 }
 
 .header__inner {
