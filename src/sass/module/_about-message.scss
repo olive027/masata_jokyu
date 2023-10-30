@@ -1,0 +1,108 @@
+@use "global" as *;
+
+.about-message {
+	background: #272625;
+}
+
+.about-message__inner.inner {
+	padding: rem(60) rem(45);
+	@include mq(md){
+		padding: rem(80) rem(50);
+		
+	}
+}
+
+.about-message__head-main {
+	font-size: rem(15);
+	line-height: calc(26 / 15);
+	letter-spacing: 0.05em;
+	color: $base-color;
+	font-weight: $medium;
+	text-align: center;
+	@include mq(md){
+		font-size: rem(24);
+		line-height: calc(40 / 24);
+	}
+}
+
+.about-message__head-sub {
+	font-size: rem(14);
+	line-height: calc(26 / 14);
+	letter-spacing: 0.05em;
+	font-family: $second-font;
+	font-weight: $light;
+	color: $base-color;
+	margin-top: rem(20);
+	@include mq(md){
+		font-size: rem(16);
+		line-height: calc(32 / 16);
+		margin-top: rem(30);
+		text-align: center;
+	}
+}
+
+.about-message__body {
+	margin-top: rem(60);
+	padding: 0 rem(18);
+	@include mq(md){
+		margin-top: rem(80);
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		gap: rem(30);
+		margin-inline: auto;
+	}
+}
+
+.about-message__body-image {
+	aspect-ratio: 250 / 293;
+	@include mq(md){
+		aspect-ratio: 290 / 340;
+		width: 22.3076%;
+	}
+}
+
+.about-message__body-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.about-message__body-text {
+	margin-top: rem(18);
+	@include mq(md){
+		width: 24.9230%;
+		margin-top: rem(86);
+	}
+}
+
+.about-message__body-maintext {
+	font-family: $second-font;
+	font-size: rem(14);
+	line-height: calc(26 / 14);
+	letter-spacing: 0.05em;
+	font-weight: $light;
+	color: $base-color;
+	margin-top: rem(18);
+	@include mq(md){
+		line-height: calc(28 / 14);
+		margin-top: rem(26);
+	}
+}
+
+.about-message__body-info {
+	font-family: $second-font;
+	font-size: rem(13);
+	font-weight: $light;
+	color: $base-color;
+	margin-top: rem(8);
+	@include mq(md){
+		margin-top: rem(20);
+		text-align: right;
+	}
+}
+
+.about-message__body-info span {
+	margin-right: 1em;
+}

@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.common-mv {
+	width: 100%;
+}
+
+.common-mv__inner {
+	width: 100%;
+	height: inherit;
+	position: relative;
+}
+
+.common-mv__image picture,
+.common-mv__image img {
+	height: inherit;
+}
+
+.common-mv__image,
+.common-mv__image picture {
+	aspect-ratio: 375 / 445;
+	@include mq(md){
+		aspect-ratio: 1440 / 543;
+	}
+}
+
+.common-mv__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.common-mv__title {
+	font-family: $english-font;
+	font-size: rem(36);
+	font-weight: $medium;
+	color: $base-color;
+	text-transform: capitalize;
+	position: absolute;
+	top: 53.4831%;
+	left: 50%;
+	transform: translateX(-50%);
+	@include mq(md){
+		font-size: rem(46);
+		font-weight: $regular;
+		letter-spacing: 0.05em;
+		top: 53.4069%;
+	}
+}

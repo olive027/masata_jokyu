@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.about-company {
+	background: $black;
+}
+
+.about-company__inner {
+	padding: rem(60) 0;
+	@include mq(md){
+		padding: rem(80) 0;
+	}
+}
+
+.about-company__list {
+	margin-top: rem(40);
+	margin-inline: auto;
+	width: 82.6086%;
+	@include mq(md){
+		margin-top: rem(70);
+		width: 56.4615%;
+	}
+}
+
+.about-company__item {
+	border-bottom: 1px solid #99958F;
+	font-size: rem(14);
+	font-family: $second-font;
+	font-weight:$light;
+	letter-spacing: 0.05em;
+	color: $base-color;
+	@include mq(md){
+		display: flex;
+		align-items: baseline;
+	}
+}
+
+
+.about-company__item:not(:first-child) {
+	padding: rem(22) 0;
+	@include mq(md){
+		padding: rem(14) 0;
+	}
+}
+
+.about-company__item:first-child {
+	padding-bottom: rem(22);
+	@include mq(md){
+		padding-bottom: rem(16);
+	}
+}
+
+.about-company__item-head {
+	@include mq(md){
+		width: 17.9836%;
+	}
+}
+
+.about-company__item-body {
+	margin-top: rem(12);
+	line-height: 2.2;
+	@include mq(md){
+		margin-top: 0;
+	}
+}
+
+.about-company__item-body span {
+	display: block;
+	@include mq(md){
+		display: inline-block;
+		margin-right: rem(10);
+	}
+}
+
+.about-company__item-mapLink {
+	text-decoration: underline;
+	// display: block;
+	cursor: pointer;
+	@include mq(md){
+		margin-top: rem(8);
+	}
+}
+
+.fa-location-dot {
+	margin-left: rem(5);
+}

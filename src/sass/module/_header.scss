@@ -1,7 +1,8 @@
 @use "global" as *;
 
 .header {
-	background: transparent;
+	// background: transparent;
+	background: $black;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -15,8 +16,12 @@
 	}
 }
 
-.header.is-color {
-	background: $black;
+// .header.is-color {
+// 	background: $black;
+// }
+
+.header.active {
+	background: transparent;
 }
 
 .header__inner {

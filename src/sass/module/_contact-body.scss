@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.contact-body {
+	background: #272625;
+	position: relative;
+}
+
+.contact-body__inner {
+	padding: rem(60) 0 rem(22);
+	@include mq(md){
+		padding: rem(80) 0;
+	}
+}
+
+.contact-body__headding {
+	font-family: $second-font;
+	font-size: rem(15);
+	font-weight: $light;
+	letter-spacing: 0.05em;
+	line-height: calc(28 / 15);
+	color: $base-color;
+	margin-inline: auto;
+	@include mq(md){
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.contact-body__form {
+	box-shadow: rem(3) rem(3) rem(3) #090909;
+	width: 100%;
+	padding: rem(40) rem(16);
+	margin-top: rem(20);
+	@include mq(md){
+		margin-top: rem(82);
+		width: 66.6666%;
+		margin-inline: auto;
+		padding: rem(60) rem(150);
+	}
+}
+
+.contact__form-button {
+	text-align: center;
+	margin-top: rem(20);
+	@include mq(md){
+		margin-top: rem(40);
+	}
+}

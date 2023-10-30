@@ -40,16 +40,53 @@ $(".js-tab").click(function(){
 });
 
 // headerに背景色を付ける
-let mvHeight = $(".js-mv-height").height();
-let headerHeight = $(".header").height();
-let header = $(".header");
+// let mvHeight = $(".js-mv-height").height();
+// let headerHeight = $(".header").height();
+// let header = $(".header");
 
+// $(window).scroll(function(){
+// 	if($(this).scrollTop() > mvHeight - headerHeight) {
+// 		header.addClass('is-color');
+// 	} else {
+// 		header.removeClass('is-color');
+// 	}
+// });
+
+// headerのスクロールが止まったら背景色
+let timeout;
 $(window).scroll(function(){
-	if($(this).scrollTop() > mvHeight - headerHeight) {
-		header.addClass('is-color');
-	} else {
-		header.removeClass('is-color');
-	}
+	$(".header").addClass('active');
+
+	clearTimeout(timeout);
+
+	timeout = setTimeout(function(){
+		$(".header").removeClass('active');
+	},300);
+});
+
+//modal
+$(function () {
+  //開くボタンをクリックしたらモーダルを表示する
+  $(".js-modal-open").click(function () {
+    $(".js-modal").fadeIn();
+		return false;
+  });
+	$(".js-modal-close").click(function () {
+    $(".js-modal").fadeOut();
+		return false;
+  });
+});
+// モーダルウィンドウオープン時の背景固定
+$(function () {
+  let scrollPosition;
+  $(".js-modal-open").click(function(){
+    scrollPosition = $(window).scrollTop();
+    $("body").addClass("fixed").css({ top: -scrollPosition });
+  });
+  $(".js-modal-close").click(function(){
+    $("body").removeClass("fixed").css({ top: 0 });
+    window.scrollTo(0, scrollPosition);
+  });
 });
 
 

@@ -1,0 +1,164 @@
+@use "global" as *;
+
+.form__item {
+	@include mq(md){
+		display: flex;
+		align-items: center;
+	}
+}
+
+.form__item:not(:first-child) {
+	margin-top: rem(20);
+	@include mq(md){
+		margin-top: rem(22);
+	}
+}
+
+.form__item:nth-of-type(4) {
+	@include mq(md){
+		margin-top: rem(32);
+	}
+}
+
+.form__item:nth-of-type(4) .form__label{
+	@include mq(md){
+		margin-bottom: auto;
+	}
+}
+
+.form__item.form__item--radio {
+	@include mq(md){
+		margin-top: rem(32);
+		flex-direction: column;
+		align-items: start;
+	}
+}
+
+.form__item.form__item--radio .form__label {
+	width: 100%;
+}
+
+.form__item.form__item--radio .form__input {
+	margin-top: rem(8);
+	padding-left: rem(8);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: rem(16);
+	@include mq(md){
+		margin-top: rem(20);
+		padding-left: rem(20);
+		flex-direction: row;
+	}
+}
+
+.form__label {
+	font-size: rem(14);
+	font-weight: $regular;
+	font-family: $second-font;
+	color: $base_color;
+	@include mq(md){
+		width: calc(100% - 72%);
+	}
+}
+
+.form__label sup {
+	color: #F93212;
+}
+
+.form__input {
+	margin-top: rem(4);
+	@include mq(md){
+		margin-top: 0;
+		width: 72%;
+	}
+}
+
+.form__input-text {
+	padding: rem(10) rem(12);
+	width: 100%;
+	font-size: rem(14);
+	font-family: $second-font;
+	background-color: #BCB5A8;
+}
+
+.form__input-text::placeholder {
+	color: #99958F;
+}
+
+.form__input textarea {
+	height: rem(170);
+	resize: none;
+}
+
+.form__input-radio + span {
+	position: relative;
+	display: inline-block;
+	padding: 0 0 0 rem(14);
+	font-size: rem(14);
+	line-height: 1;
+	color: $base_color;
+	cursor: pointer;
+	@include mq(md){
+		margin-right: rem(24);
+	}
+
+	&::before {
+		position: absolute;
+		content: "";
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		background: #272625;
+		border: 1px solid #BCB5A8;
+		border-radius: 50%;
+		width: rem(10);
+		height: rem(10);
+		display: block;
+	}
+	&::after {
+		opacity: 0;
+		transition: 0.3s ease;
+	}
+}
+
+.form__input-radio:checked + span {
+	&::after {
+		position: absolute;
+		content: "";
+		top: 50%;
+		left: rem(2);
+		transform: translateY(-50%);
+		background: #BCB5A8;
+		border-radius: 50%;
+		width: rem(6);
+		height: rem(6);
+		display: block;
+		opacity: 1;
+	}
+}
+
+.form__btn {
+	display: inline-block;
+	width: rem(169);
+	padding: rem(14) 0;
+	color: $base-color;
+	font-size: rem(14);
+	font-weight: $regular;
+	letter-spacing: 0.05em;
+	background: #272625;
+	border: 1px solid $base-color;
+	border-radius: 6px;
+	text-align: center;
+	position: relative;
+	transition: 0.4s box-shadow, 0.4s border-color;
+	@include mq(md){
+		width: rem(183);
+		font-size: rem(16);
+		padding: rem(16) 0;
+	}
+	&:hover {
+		box-shadow: 0 rem(7) rem(7) rgba(0,0,0,0.5);
+		border-color: transparent;
+	}
+}

@@ -1,6 +1,7 @@
 @use "global" as *;
 
-.section-header__title {
+.section-header__title,
+.section-header-subpage__title {
 	font-size: rem(32);
 	letter-spacing: 0.05em;
 	font-family: $english-font;
@@ -17,7 +18,8 @@
 	}
 }
 
-.section-header__title::before {
+.section-header__title::before,
+.section-header-subpage__title::before {
 	content: "";
 	display: block;
 	width: rem(20);
@@ -55,4 +57,10 @@
 
 .section-header.news__section-header .section-header__title::after {
 	background-color: #99958F;
+}
+
+.company__section-header.section-header-sabpage .section-header-subpage__title {
+	@include mq(md){
+		margin-left: rem(225);
+	}
 }
